@@ -12,12 +12,18 @@ import {
 } from './redux/contacts/contacts-operations';
 
 import { setFilter } from './redux/filter/filter-slice';
-import { selectAllContacts } from './redux/contacts/contacts-selector';
+import {
+  selectContacts,
+  selectFilteredContacts,
+} from './redux/contacts/contacts-selector';
 
 import styles from './app.module.css';
 
 const App = () => {
-  const { items, isLoading, error } = useSelector(selectAllContacts);
+  const { isLoading, error } = useSelector(selectContacts);
+  const items = useSelector(selectFilteredContacts);
+
+  // const { items, isLoading, error } = useSelector(selectFilteredContacts);
 
   const dispatch = useDispatch();
 
