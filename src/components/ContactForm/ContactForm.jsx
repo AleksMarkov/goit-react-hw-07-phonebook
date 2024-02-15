@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   name: '',
   phone: '',
 };
+// phone instead of number
 
 const ContactForm = ({ onSubmit }) => {
   const [state, setState] = useState({ ...INITIAL_STATE });
@@ -32,7 +33,7 @@ const ContactForm = ({ onSubmit }) => {
   const phoneBookID = useMemo(() => nanoid(), []);
   const phoneNumberID = useMemo(() => nanoid(), []);
 
-  const { name, phone} = state;
+  const { name, phone } = state;
 
   return (
     <form onSubmit={handleSubmit}>
