@@ -5,7 +5,7 @@ import styles from './contact-form.module.css';
 
 const INITIAL_STATE = {
   name: '',
-  number: '',
+  phone: '',
 };
 
 const ContactForm = ({ onSubmit }) => {
@@ -32,7 +32,7 @@ const ContactForm = ({ onSubmit }) => {
   const phoneBookID = useMemo(() => nanoid(), []);
   const phoneNumberID = useMemo(() => nanoid(), []);
 
-  const { name, number } = state;
+  const { name, phone} = state;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -49,9 +49,9 @@ const ContactForm = ({ onSubmit }) => {
         ></input>
         <label htmlFor={phoneNumberID}>Number</label>
         <input
-          value={number}
+          value={phone}
           type="tel"
-          name="number"
+          name="phone"
           onChange={handleChange}
           id={phoneNumberID}
           placeholder="enter phone number"

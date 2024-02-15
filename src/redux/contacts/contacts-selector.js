@@ -15,23 +15,3 @@ export const selectFilteredContacts = store => {
   return filteredContacts;
 };
 
-// export const selectBooks = state => state.books;
-
-// export const selectFilteredBooks = store => {
-//     const { books, filter } = store;
-//     const { items } = books;
-//     if (!filter) {
-//         return items;
-//     }
-
-//     const normalizedFilter = filter.toLowerCase();
-
-//     const filteredBooks = items.filter(({ title, author }) => {
-//         const normalizedTitle = title.toLowerCase();
-//         const normalizedAuthor = author.toLowerCase();
-
-//         return (normalizedAuthor.includes(normalizedFilter) || normalizedTitle.includes(normalizedFilter))
-//     });
-
-//     return filteredBooks
-// }

@@ -23,8 +23,6 @@ const App = () => {
   const { isLoading, error } = useSelector(selectContacts);
   const items = useSelector(selectFilteredContacts);
 
-  // const { items, isLoading, error } = useSelector(selectFilteredContacts);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
